@@ -38,6 +38,39 @@ const Property = ({
 					alt="house"
 				/>
 			</Box>
+			<Box w="full">
+				<Flex
+					paddingTop="2"
+					alighItems="center"
+					justifyContent="space-between"
+				>
+					<Flex alighItems="center">
+						<Box paddingRight="3" color="green.400">
+							{isVerified && <GoVerified />}
+						</Box>
+						<Text fontWeight="bold" fontSize="lg">
+							AUD {millify(price)}
+							{rentFrequency && `/${rentFrequency}`}
+						</Text>
+					</Flex>
+					<Box>
+						<Avatar size="sm" src={agency?.logo?.url} />
+					</Box>
+				</Flex>
+				<Flex
+					alighItems="center"
+					p="1"
+					justifyContent="space-between"
+					w="250px"
+					color="blue.400"
+				>
+					{rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)}{" "}
+					sqft <BsGridFill />
+				</Flex>
+				<Text fontSize="lg">
+					{title.length > 30 ? `${title.substring(0, 30)}...` : title}
+				</Text>
+			</Box>
 		</Flex>
 	</Link>
 );
