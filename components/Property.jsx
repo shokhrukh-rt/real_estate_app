@@ -18,10 +18,10 @@ const Property = ({
 		area,
 		agency,
 		isVerified,
-		externalId,
+		externalID,
 	},
 }) => (
-	<Link href={`/property/${externalId}`} passHref>
+	<Link href={`/property/${externalID}`} passHref>
 		<Flex
 			flexWrap="wrap"
 			w="420px"
@@ -41,10 +41,10 @@ const Property = ({
 			<Box w="full">
 				<Flex
 					paddingTop="2"
-					alighItems="center"
+					alignItems="center"
 					justifyContent="space-between"
 				>
-					<Flex alighItems="center">
+					<Flex alignItems="center">
 						<Box paddingRight="3" color="green.400">
 							{isVerified && <GoVerified />}
 						</Box>
@@ -58,7 +58,7 @@ const Property = ({
 					</Box>
 				</Flex>
 				<Flex
-					alighItems="center"
+					alignItems="center"
 					p="1"
 					justifyContent="space-between"
 					w="250px"
